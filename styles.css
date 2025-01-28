@@ -5,13 +5,12 @@ body {
     background-color: black;
     color: white;
     line-height: 1.6;
-    overflow-x: hidden;
   }
   
   h1 {
     text-transform: uppercase;
     color: #c0392b;
-    font-size: 10em;
+    font-size: 6vw; /* Scales with screen width */
   }
   
   p {
@@ -37,23 +36,60 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-  }
-  
-  .navbar ul {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    text-transform: uppercase;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .nav-list {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
   }
   
-  .navbar li {
+  .nav-list li {
     margin: 0 15px;
   }
   
-  .navbar a {
-    font-weight: bold;
-    text-transform: uppercase;
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background-color: black;
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    .nav-list.active {
+      display: flex;
+    }
+  
+    .nav-list li {
+      margin: 10px 0;
+      text-align: center;
+    }
   }
   
   /* Intro Section */
@@ -66,27 +102,20 @@ body {
   .intro a {
     display: inline-block;
     margin: 10px 0;
-    font-size: 18px;
-    color: white;
+    font-size: 16px;
   }
   
-  .intro a:hover {
-    color: #c0392b;
-  }
-  
-  /* Motto Section */
   .motto {
     text-align: center;
     padding: 20px;
     background-color: black;
-    font-size: 18px;
-    color: #ccc;
+    font-size: 16px;
   }
   
   /* Gallery Section */
   .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 15px;
     padding: 20px;
     max-width: 1200px;
