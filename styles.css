@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: "Century Gothic", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    color: #c0392b;
+    font-size: 10em;
+  }
+  
+  p {
+    margin: 10px 0;
+    text-transform: uppercase;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+  }
+  
+  a:hover {
+    color: #c0392b;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: black;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar li {
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Intro Section */
+  .intro {
+    text-align: center;
+    padding: 30px 15px;
+    background: black;
+  }
+  
+  .intro a {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 18px;
+    color: white;
+  }
+  
+  .intro a:hover {
+    color: #c0392b;
+  }
+  
+  /* Motto Section */
+  .motto {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  /* Gallery Section */
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: black;
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+  
+  footer a {
+    color: #c0392b;
+  }
+  
